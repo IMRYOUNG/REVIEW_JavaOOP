@@ -1,0 +1,48 @@
+package inheritance;
+
+public class Customer {
+	private int customerID;
+	private String customerName;
+	protected String customerGrade;
+	int bonusPoint;
+	double bonusRatio;
+	
+	public Customer() {
+		this.customerGrade="SILVER";
+		this.bonusRatio=0.01;
+	}
+	
+	public int calcPrice(int price) {
+		bonusPoint+=price*bonusRatio;
+		return price;
+	}
+	
+	public String showCustomerInfo() {
+		return customerName+" 님의 등급은 "+customerGrade+"이미 적립된 보너스 금액은 "+bonusPoint+"입니다!";
+	}
+	
+
+	public int getCustomerID() {
+		return customerID;
+	}
+
+	public void setCustomerID(int customerID) {
+		this.customerID = customerID;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+	public String getCustomerGrade() {
+		return customerGrade;
+	}
+
+	public void setCustomerGrade(String customerGrade) {
+		this.customerGrade = customerGrade;
+	}
+}
